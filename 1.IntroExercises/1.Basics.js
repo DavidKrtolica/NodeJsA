@@ -24,6 +24,10 @@ const number = 1;
 // The result should be 2020
 // You cannot touch line 1 or 2
 
-console.log(parseInt(year) + number)
+const thisYear = parseInt(year) + number;
+console.log(thisYear)
+
+const thisYearNew = Number(year) + number;
+console.log(thisYearNew)
 
 // --------------------------------------
