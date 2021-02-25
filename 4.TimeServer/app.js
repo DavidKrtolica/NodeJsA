@@ -14,7 +14,8 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 //HOMEPAGE FOR THE TIME API
 app.get("/", (req, res) => {
     res.send("<h1>Welcome to my Time API !</h1>To access the current time, write \"/time\".<br>To access the current day of the month,"
-            +" write \"/day\".<br>For current month, write \"/month\".<br><br>It works in realtime, check by refresing the time :)");
+            +" write \"/day\".<br>For current month, write \"/month\".<br><br>It works in realtime, check by refresing the time :)<br>"
+            + "If you want to check the version of this API, go to \"/about\".");
 });
 
 app.get("/time", (req, res) => {
@@ -27,6 +28,10 @@ app.get("/day", (req, res) => {
 
 app.get("/month", (req, res) => {
     res.send({currentMonth: months[new Date().getMonth()]});
+});
+
+app.get("/about", (req, res) => {
+    res.send({version: "0.0.1"});
 });
 
 app.listen(8082);
