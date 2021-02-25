@@ -13,3 +13,17 @@ const copiedFruits = fruits.map(fruit => {
 });
 console.log(copiedFruits);
 
+const people = [
+    {
+        name: "David",
+        age: 50
+    }, 
+    {
+        name: "Anders",
+        age: 50
+    }
+];
+
+//REDUCE LOOP
+const peopleAgeSum = people.reduce((accumulator, person) => accumulator + person.age);
+console.log(peopleAgeSum);
