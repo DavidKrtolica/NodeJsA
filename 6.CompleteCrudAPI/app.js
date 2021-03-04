@@ -3,28 +3,7 @@ const app = express();
 app.use(express.json());
 
 //DEFINING BIKES ARRAY AS DATA
-const bikes = [
-    {
-        name: "Trek",
-        size: "XL",
-        id: 1
-    },
-    {
-        name: "Cannondale",
-        size: "L",
-        id: 2
-    },
-    {
-        name: "Cube",
-        size: "M",
-        id: 3
-    },
-    {
-        name: "Trek",
-        size: "S",
-        id: 4
-    }
-];
+const bikes = require("./bikes.json");
 
 
 //FIRST PAGE
@@ -100,4 +79,10 @@ app.delete("/bikes/:id", (req, res) => {
 });
 
 
-app.listen(8080);
+app.listen(8080, (error) => {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log("App running on port", 8080);
+    }
+});

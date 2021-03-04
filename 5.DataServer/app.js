@@ -4,6 +4,8 @@ const app = express();
 //SETTING UP THE BODY-PARSER
 app.use(express.json());
 
+//GETTING CATS DATA FROM JSON
+const cats = require("./cats.json");
 
 //QUERY STRINGS USING QUESTIONMARK
 app.get("/querystring", (req, res) => {
@@ -24,5 +26,16 @@ app.post("/whatever", (req, res) => {
     res.send({body: req.body});
 });
 
+//CAT ROUTE
+app.get("/cat", (req, res) => {
+    res.send(cats);
+});
 
-app.listen(8083);
+
+app.listen(8083, (error) => {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log("App running on port", 8083);
+    }
+});
