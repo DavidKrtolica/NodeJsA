@@ -1,0 +1,38 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar {
+    background-color: darkblue;
+    overflow: hidden;
+}
+
+.nav-bar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Arial;
+}
+
+.nav-bar a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.nav-bar a.active {
+    background-color: greenyellow;
+    color: white;
+}
+
+.main-page-container {
+    padding: 15px;
+}
+
+#container-top {
+    margin-top: 30px;
+    
+}
