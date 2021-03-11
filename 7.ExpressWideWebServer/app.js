@@ -14,9 +14,11 @@ app.get("/details", (req, res) => {
 });
 
 
-app.listen(5000, error => {
+const PORT = process.env.PORT || 8080
+
+app.listen(PORT, error => {
     if (error) {
         console.log(error);
     }
-    console.log("Server running on port", 5000);
+    console.log("Server running on port", Number(PORT));
 });
