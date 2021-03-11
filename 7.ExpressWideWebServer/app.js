@@ -13,6 +13,11 @@ app.get("/details", (req, res) => {
     res.sendFile(__dirname + "/public/details.html");
 });
 
+//SERVER-SIDE REDIRECTION
+app.get("/safeport", (req, res) => {
+    res.redirect("/details");
+});
+
 
 const PORT = process.env.PORT || 8080
 
